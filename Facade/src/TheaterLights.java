@@ -1,7 +1,4 @@
-package main;
-
-public class TheaterLights 
-{
+public class TheaterLights  {
     String description;
 
     public TheaterLights(String description) 

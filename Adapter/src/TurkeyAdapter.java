@@ -1,9 +1,3 @@
-package main;
-
-/**
- *
- * @author arnal
- */
 public class TurkeyAdapter implements Duck
 {
     public Turkey turkey;

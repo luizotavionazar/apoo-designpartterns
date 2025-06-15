@@ -1,7 +1,4 @@
-package main;
-
-public class PopcornPopper 
-{
+public class PopcornPopper {
     String description;
 
     public PopcornPopper(String description) 

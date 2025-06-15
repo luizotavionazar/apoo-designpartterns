@@ -1,9 +1,3 @@
-package main;
-
-/**
- *
- * @author arnal
- */
 public class Main 
 {
     public static void main(String[] args) 

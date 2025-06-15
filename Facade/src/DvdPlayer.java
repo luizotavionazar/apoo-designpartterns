@@ -1,7 +1,4 @@
-package main;
-
-public class DvdPlayer 
-{
+public class DvdPlayer {
     String description;
     int currentTrack;
     Amplifier amplifier;

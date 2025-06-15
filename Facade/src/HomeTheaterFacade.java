@@ -1,9 +1,3 @@
-package main;
-
-/**
- *
- * @author arnal
- */
 public class HomeTheaterFacade 
 {
     Amplifier amp;

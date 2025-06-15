@@ -1,7 +1,4 @@
-package main;
-
-public class Screen
-{
+public class Screen {
     String description;
 
     public Screen(String description) 

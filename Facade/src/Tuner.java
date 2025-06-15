@@ -1,7 +1,4 @@
-package main;
-
-public class Tuner 
-{
+public class Tuner {
     String description;
     Amplifier amplifier;
     double frequency;

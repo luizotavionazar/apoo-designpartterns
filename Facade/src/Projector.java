@@ -1,7 +1,4 @@
-package main;
-
-public class Projector
-{
+public class Projector {
     String description;
     DvdPlayer dvdPlayer;
 

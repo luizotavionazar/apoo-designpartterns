@@ -1,7 +1,4 @@
-package main;
-
-public class Amplifier 
-{
+public class Amplifier {
     String description;
     Tuner tuner;
     DvdPlayer dvd;
