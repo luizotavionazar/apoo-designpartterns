@@ -20,99 +20,23 @@ public class HomeTheater {
         this.luzes = luzes;
         this.tuner = tuner;
     }
-
-    public void assistirFilme(String filme) {
+    
+    public void assistirFilme(String filme, int brilho, boolean luzLigada, boolean widescreen, int volume) {
         System.out.println("Preparando sessão para exibir o filme...");
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            System.err.println("Interrompido!");
-            Thread.currentThread().interrupt();
-        }
-        pipoqueira.ligar();
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            System.err.println("Interrompido!");
-            Thread.currentThread().interrupt();
-        }
-        pipoqueira.estourarPipoca();
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            System.err.println("Interrompido!");
-            Thread.currentThread().interrupt();
-        }
-        luzes.regular(5);
-        try {
-            TimeUnit.SECONDS.sleep(2); 
-        } catch (InterruptedException e) {
-            System.err.println("Interrompido!");
-            Thread.currentThread().interrupt();
-        }
+        if (!luzLigada) luzes.ligar();
+        luzes.regular(brilho);
         tela.abaixar();
-        try {
-            TimeUnit.SECONDS.sleep(2); 
-        } catch (InterruptedException e) {
-            System.err.println("Interrompido!");
-            Thread.currentThread().interrupt();
-        }
         projetor.ligar();
-        try {
-            TimeUnit.SECONDS.sleep(2); 
-        } catch (InterruptedException e) {
-            System.err.println("Interrompido!");
-            Thread.currentThread().interrupt();
-        }
-        projetor.modoWidescreen();
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            System.err.println("Interrompido!");
-            Thread.currentThread().interrupt();
-        }
+        if (widescreen) projetor.modoWidescreen();
+        else projetor.modoTv();
         amp.ligar();
-        try {
-            TimeUnit.SECONDS.sleep(2); 
-        } catch (InterruptedException e) {
-            System.err.println("Interrompido!");
-            Thread.currentThread().interrupt();
-        }
         amp.setarDvd(dvd);
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            System.err.println("Interrompido!");
-            Thread.currentThread().interrupt();
-        }
         amp.setarSomSurround();
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            System.err.println("Interrompido!");
-            Thread.currentThread().interrupt();
-        }
-        amp.setarVolume(5);
-        try {
-            TimeUnit.SECONDS.sleep(2); 
-        } catch (InterruptedException e) {
-            System.err.println("Interrompido!");
-            Thread.currentThread().interrupt();
-        }
+        amp.setarVolume(volume);
+        pipoqueira.ligar();
+        pipoqueira.estourarPipoca();
         dvd.ligar();
-        try {
-            TimeUnit.SECONDS.sleep(2); 
-        } catch (InterruptedException e) {
-            System.err.println("Interrompido!");
-            Thread.currentThread().interrupt();
-        }
         dvd.reproduzir(filme);
-        try {
-            TimeUnit.SECONDS.sleep(5);
-        } catch (InterruptedException e) {
-            System.err.println("Interrompido!");
-            Thread.currentThread().interrupt();
-        }
     }
 
     public void terminarFilme() {
