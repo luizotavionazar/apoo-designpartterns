@@ -1,6 +1,8 @@
 {
     "java.project.sourcePaths": [
         "Adapter/src",
-        "Facade/src"
-    ]
+        "Facade/src",
+        "DesignPatternsAdapterFacade"
+    ],
+    "java.project.referencedLibraries": []
 }
