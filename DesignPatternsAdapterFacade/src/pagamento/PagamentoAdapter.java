@@ -10,11 +10,11 @@ public class PagamentoAdapter implements Pagamento {
     }
 
     @Override
-    public void pagar(int formaPagamento, double valor) {
+    public void pagar(int formaPagamento, double valor) { //Adaptação do pagamento realizando o processo necessário conforme a forma de pagamento
         if (formaPagamento == 0) {
-            avista.efetuarPagamentoAVista(valor);
+            avista.efetuarPagamento(valor);
         } else {
-            aprazo.efetuarPagamentoAPrazo(valor);
+            aprazo.efetuarPagamento(valor);
         }
         
     }

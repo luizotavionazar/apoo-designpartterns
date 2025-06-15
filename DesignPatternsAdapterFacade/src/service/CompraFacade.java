@@ -23,12 +23,12 @@ public class CompraFacade {
         this.pagamento = new PagamentoAdapter(new PagamentoAVista(), new PagamentoAPrazo());
     }
 
-    public void realizarCompra(Cliente cliente, Produto produto, int formaPagamento) {
+    public void realizarCompra(Cliente cliente, Produto produto, int formaPagamento) { //São as instruções de como a compra deve ser feita
         System.out.println("\n:::::::: Processando pedido...");
         timer.esperar();
         pedido.gerarPedido(cliente, produto);
         timer.esperar();
-        pagamento.pagar(formaPagamento, produto.getPreco());
+        pagamento.pagar(formaPagamento, produto.getPreco()); //Adaptado para realizar o pagamento em diferentes formas
         timer.esperar();
         estoque.baixarEstoque(produto);
         timer.esperar();
