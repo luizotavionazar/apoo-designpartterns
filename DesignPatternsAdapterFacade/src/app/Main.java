@@ -14,8 +14,9 @@ public class Main {
         System.out.println("\n:::::::: UTILIZANDO ADAPTER E FAÇADE");
         System.out.println(":::::::: APOO - Design Patterns");
         System.out.println(":::::::: Luiz Otávio Nazar - TADS 5º");
-
-        System.out.print("\n::: Nome do Cliente: ");
+        
+        System.out.println("\n:::::::: Gerador de Pedido Simples");
+        System.out.print("::: Nome do Cliente: ");
         Cliente cliente = new Cliente(in.nextLine());
 
         System.out.print("::: Produto: ");
