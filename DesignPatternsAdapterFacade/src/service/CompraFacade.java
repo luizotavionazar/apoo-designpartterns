@@ -13,14 +13,14 @@ public class CompraFacade {
     private EstoqueService estoque;
     private EntregaService entrega;
     private Pagamento pagamento;
-
-    private Timer timer = new Timer();
+    private Timer timer;
 
     public CompraFacade() {
         this.pedido = new PedidoService();
         this.estoque = new EstoqueService();
         this.entrega = new EntregaService();
         this.pagamento = new PagamentoAdapter(new PagamentoAVista(), new PagamentoAPrazo());
+        this.timer = new Timer();
     }
 
     public void realizarCompra(Cliente cliente, Produto produto, int formaPagamento) { //São as instruções de como a compra deve ser feita
@@ -37,3 +37,5 @@ public class CompraFacade {
         System.out.println(":::::::: Pedido processado com sucesso!\n");
     }
 }
+
+

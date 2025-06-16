@@ -19,3 +19,6 @@ public class PagamentoAdapter implements Pagamento {
         
     }
 }
+
+
+
