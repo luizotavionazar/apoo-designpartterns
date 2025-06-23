@@ -2,7 +2,9 @@
     "java.project.sourcePaths": [
         "Adapter/src",
         "Facade/src",
-        "DesignPatternsAdapterFacade"
+        "DesignPatternsAdapterFacade",
+        "Atividade2",
+        "Atividade1"
     ],
     "java.project.referencedLibraries": []
 }
